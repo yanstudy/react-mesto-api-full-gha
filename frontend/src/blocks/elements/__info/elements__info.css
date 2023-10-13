@@ -1,0 +1,8 @@
+.elements__info {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 246px;
+  padding: 25px 15px 31px 21px;
+}

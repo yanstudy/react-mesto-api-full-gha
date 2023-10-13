@@ -1,0 +1,6 @@
+.popup__form {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

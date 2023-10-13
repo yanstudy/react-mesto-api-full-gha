@@ -1,0 +1,6 @@
+.popup__wrapper-confirm {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

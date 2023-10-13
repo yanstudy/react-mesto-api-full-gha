@@ -1,0 +1,29 @@
+.header {
+  max-width: 880px;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 41px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  text-align: right;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  line-height: 22px;
+}
+
+@media (max-width: 896px) {
+  .header {
+    max-width: 581px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding-top: 28px;
+    padding-bottom: 31.6px;
+  }
+}

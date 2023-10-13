@@ -1,0 +1,9 @@
+.elements__picture {
+  max-width: 282px;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  display: block;
+  object-fit: cover;
+  cursor: pointer;
+  height: 282px;
+}

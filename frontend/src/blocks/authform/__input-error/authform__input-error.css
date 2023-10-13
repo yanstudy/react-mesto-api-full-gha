@@ -1,0 +1,12 @@
+.authform__input-error {
+  color: red;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  max-height: 30px;
+  max-width: 358px;
+  overflow: hidden;
+}
