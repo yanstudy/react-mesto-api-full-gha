@@ -31,6 +31,9 @@ function App() {
   const [user, setUser] = useState({});
   const [cards, setCards] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(
+    localStorage.getItem('loggedIn') || false
+  );
 
   useEffect(() => {
     if (user && user.email) {
@@ -163,6 +166,7 @@ function App() {
         if (data) {
           setInfoToolTipPopupOpen(true);
           setUser(data);
+          setLoggedIn(localStorage.setItem('loggedIn', true));
           setRegistrationSuccess(true);
         }
       })
@@ -181,6 +185,7 @@ function App() {
       .then((dataUser) => {
         if (dataUser) {
           setUser(dataUser);
+          setLoggedIn(localStorage.setItem('loggedIn', true));
         }
       })
       .catch((err) => console.log(err));
@@ -189,22 +194,26 @@ function App() {
   const cbLogout = async () => {
     await authApi
       .logOut()
-      .then((data) => console.log(data.message))
+      .then((data) => {
+        console.log(data.message);
+        setUser(null);
+        setLoggedIn(localStorage.setItem('loggedIn', false));
+      })
       .catch((err) => console.log(err));
-
-    setUser(null);
   };
 
   useEffect(() => {
-    authApi
-      .getContent()
-      .then((dataUser) => {
-        if (dataUser) {
-          setUser(dataUser);
-        }
-      })
-      .catch((err) => console.log(err));
-  }, []);
+    if (loggedIn) {
+      authApi
+        .getContent()
+        .then((dataUser) => {
+          if (dataUser) {
+            setUser(dataUser);
+          }
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [loggedIn]);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
