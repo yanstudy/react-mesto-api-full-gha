@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://api.yanstudy.nomoredomainsrocks.ru';
+export const BASE_URL = 'https://api.yanstudy.nomoredomainsrocks.ru';
 
 function checkResponse(res) {
   return res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);

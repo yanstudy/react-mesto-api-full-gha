@@ -90,7 +90,7 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: 'http://api.yanstudy.nomoredomainsrocks.ru',
+  baseUrl: 'https://api.yanstudy.nomoredomainsrocks.ru',
   headers: {
     'Content-Type': 'application/json', 
   },
