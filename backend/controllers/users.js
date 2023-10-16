@@ -19,7 +19,7 @@ const createUser = (req, res, next) => {
     })
       .then((newUser) => {
         const { password: hashPassword, ...userWithoutPassword } = newUser.toObject();
-        const token = jwt.sign({ _id: newUser._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '7d' });
+        const token = jwt.sign({ _id: newUser._id }, NODE_ENV === 'production' ? JWT_SECRET : 'JWT', { expiresIn: '7d' });
 
         res.status(201).cookie('jwt', token, {
           maxAge: 3600000 * 24 * 7,
@@ -97,7 +97,7 @@ const login = (req, res, next) => {
         .then((isValidPassword) => {
           if (!isValidPassword) throw new AuthError('Логин или пароль неправильный');
 
-          const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '7d' });
+          const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'JWT', { expiresIn: '7d' });
 
           return res.status(200).cookie('jwt', token, {
             maxAge: 3600000 * 24 * 7,

@@ -7,7 +7,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.83.254
+IP 158.160.83.254
 
 Frontend https://yanstudy.nomoredomainsrocks.ru
 
