@@ -13,7 +13,7 @@ const { login, logout, createUser } = require('./controllers/users');
 const auth = require('./middlewares/auth');
 const { checkSigninInfo, checkSignupInfo } = require('./middlewares/validation');
 
-const { PORT, DB_URL } = process.env;
+const { PORT = '3000', DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 
 // База данных
 mongoose

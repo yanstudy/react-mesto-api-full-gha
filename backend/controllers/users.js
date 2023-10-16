@@ -5,7 +5,7 @@ const AuthError = require('../errors/auth-err');
 const NotFoundError = require('../errors/not-found-err');
 
 const SAULT_ROUNDS = 10;
-const { JWT_SECRET, NODE_ENV } = process.env;
+const { JWT_SECRET = 'JWT', NODE_ENV } = process.env;
 
 // Создание пользователя
 const createUser = (req, res, next) => {
