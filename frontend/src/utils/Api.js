@@ -90,9 +90,8 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'http://api.yanstudy.nomoredomainsrocks.ru',
   headers: {
-    authorization: '06c146c5-fdfa-4750-9867-de096eb4c728',
     'Content-Type': 'application/json', 
   },
 });
