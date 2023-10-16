@@ -1,5 +1,6 @@
 const allowedCors = [
-  'http://localhost:3001',
+  'https://yanstudy.nomoredomainsrocks.ru',
+  'http://yanstudy.nomoredomainsrocks.ru',
   'https://praktikum.tk',
   'http://praktikum.tk',
 ];
