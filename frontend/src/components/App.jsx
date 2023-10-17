@@ -165,7 +165,6 @@ function App() {
       .then((data) => {
         if (data) {
           setInfoToolTipPopupOpen(true);
-          setUser(data);
           setRegistrationSuccess(true);
         }
       })
