@@ -59,7 +59,7 @@ const addLike = (req, res, next) => {
       { new: true },
     )))
     .then((like) => {
-      res.status(201).send(like);
+      res.status(200).send(like);
     })
     .catch(next);
 };

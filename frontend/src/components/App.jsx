@@ -166,7 +166,6 @@ function App() {
         if (data) {
           setInfoToolTipPopupOpen(true);
           setUser(data);
-          setLoggedIn(localStorage.setItem('loggedIn', true));
           setRegistrationSuccess(true);
         }
       })

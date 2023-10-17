@@ -19,12 +19,7 @@ const createUser = (req, res, next) => {
     })
       .then((newUser) => {
         const { password: hashPassword, ...userWithoutPassword } = newUser.toObject();
-        const token = jwt.sign({ _id: newUser._id }, NODE_ENV === 'production' ? JWT_SECRET : 'JWT', { expiresIn: '7d' });
-
-        res.status(201).cookie('jwt', token, {
-          maxAge: 3600000 * 24 * 7,
-          httpOnly: true,
-        }).send(userWithoutPassword);
+        res.status(201).send(userWithoutPassword);
       })
       .catch(next);
   });
