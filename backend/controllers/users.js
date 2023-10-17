@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const userModel = require('../models/user');
 const AuthError = require('../errors/auth-err');
 const NotFoundError = require('../errors/not-found-err');
-const SAULT_ROUNDS = require('../../config');
+const { SAULT_ROUNDS } = require('../../config');
 const { JWT_SECRET, NODE_ENV } = require('../../config');
 
 // Создание пользователя

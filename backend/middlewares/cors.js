@@ -1,4 +1,4 @@
-const allowedCors = require('../../config');
+const { allowedCors } = require('../../config');
 
 module.exports = (req, res, next) => {
   const { origin } = req.headers;
