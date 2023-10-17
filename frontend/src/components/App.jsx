@@ -195,7 +195,7 @@ function App() {
       .then((data) => {
         console.log(data.message);
         setUser(null);
-        setLoggedIn(localStorage.setItem('loggedIn', false));
+        setLoggedIn(localStorage.removeItem('loggedIn'));
       })
       .catch((err) => console.log(err));
   };
