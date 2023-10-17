@@ -3,9 +3,8 @@ const jwt = require('jsonwebtoken');
 const userModel = require('../models/user');
 const AuthError = require('../errors/auth-err');
 const NotFoundError = require('../errors/not-found-err');
-
-const SAULT_ROUNDS = 10;
-const { JWT_SECRET = 'JWT', NODE_ENV } = process.env;
+const SAULT_ROUNDS = require('../../config');
+const { JWT_SECRET, NODE_ENV } = require('../../config');
 
 // Создание пользователя
 const createUser = (req, res, next) => {

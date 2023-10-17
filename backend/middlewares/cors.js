@@ -1,9 +1,4 @@
-const allowedCors = [
-  'https://yanstudy.nomoredomainsrocks.ru',
-  'http://yanstudy.nomoredomainsrocks.ru',
-  'https://praktikum.tk',
-  'http://praktikum.tk',
-];
+const allowedCors = require('../../config');
 
 module.exports = (req, res, next) => {
   const { origin } = req.headers;
